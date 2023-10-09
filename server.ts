@@ -5,7 +5,9 @@ import bodyParser from "body-parser";
 import path from "path";
 import mongooseServer from "./database/mongooseServer";
 import initializeApolloServer from "./apolloServer";
+import dotenv from "dotenv";
 
+dotenv.config();
 const init = async (): Promise<void> => {
   const PORT = 7000;
 

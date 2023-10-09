@@ -13,7 +13,9 @@ export const companyTypes = [company];
 export const companyQuery = {
   companyList: {
     type: userConnection,
-    resolve: async () => {
+    resolve: async (id, args, context) => {
+      const token = await context?.req?.headers?.authorization;
+      console.log("00000000000000",token)
       const companyList = await companys.find();
       return {
         data: companyList,

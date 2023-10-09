@@ -5,6 +5,7 @@ export const singInUserPayload = new GraphQLObjectType({
   description: "singInUserPayload Object",
   fields: () => ({
     isSuccess: { type: GraphQLBoolean },
+    token: { type: GraphQLString },
     error: {
       type: GraphQLString,
     },
